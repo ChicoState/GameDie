@@ -15,11 +15,11 @@ GameDie::GameDie()
 
 
 //generate a random number between 1-6 (inclusive) and display it
-void GameDie::roll()
+int GameDie::roll()
 {
  int diceValue = 0;
  std::uniform_int_distribution<int> distribution(1,6);
  diceValue = distribution(generator);
- cout<<"\nThe Dice Value is "<<diceValue;
+ return diceValue;
 }
 
