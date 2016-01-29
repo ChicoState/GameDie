@@ -15,7 +15,7 @@ GameDie::GameDie()
 //generate a random number between 1-6 (inclusive) and display it
 void GameDie::roll()
 {
-	num = rand()%6;
+	num = rand();
 	return;
 }
 
