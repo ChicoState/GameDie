@@ -1,6 +1,12 @@
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
 
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+
 class GameDie
 {
   public:
@@ -8,5 +14,5 @@ class GameDie
    int roll();
 };
 
-#include "GameDie.cpp"
+//#include "GameDie.cpp"
 #endif
