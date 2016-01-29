@@ -1,14 +1,9 @@
-#include <iostream>
-#include <cstdlib>
-#include <iostream>
-#include <ctime>
 #include "GameDie.h"
-using namespace std;
 
-int num;
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
+	num = 0;
 	srand( time( NULL ) );  //  using the time seed from srand explanation
 }
 
@@ -16,12 +11,8 @@ GameDie::GameDie()
 void GameDie::roll()
 {
 	num = rand()%6;
+	cout<<num<<endl;
 	return;
 }
 
-int main(){
-	GameDie gamedie;
-	gamedie.roll();
-	cout<<num<<endl;
-	return 1;
-}
+
