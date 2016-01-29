@@ -5,8 +5,9 @@
 class GameDie
 {
   public:
-   unsigned int time_ui;
    GameDie();
-   void roll();
+   int roll();
 };
+
+#include "GameDie.cpp"
 #endif
