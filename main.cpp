@@ -3,7 +3,7 @@
 
 int main(){
 	GameDie G;
-	G.roll();
+	std::cout<<"GameDie value : "<< G.roll() <<std::endl;
 
 	return 0;
 } 
