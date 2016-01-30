@@ -18,7 +18,7 @@ int GameDie::roll()
     
     srand(time(NULL));    
     int random_num = rand()%6+1;
-
+    //cout<<"Generated random number is :- "<< x << endl;
     return random_num;
 
 }

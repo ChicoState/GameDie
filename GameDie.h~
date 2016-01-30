@@ -1,4 +1,5 @@
 /*
+
 Steps to execute the program :-
 
 1. ~$ g++ main.cpp -o random_num
@@ -8,8 +9,6 @@ Steps to execute the program :-
 
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
-
-
 
 class GameDie
 {
