@@ -11,6 +11,8 @@ GameDie::GameDie()
 int GameDie::roll()
 {
         srand(time(NULL));
-        std::cout << (rand() % 6 + 1) <<std::endl;
+        int result = (rand() %6 +1);
+        std::cout << result <<std::endl;
+        return (result);
 }
 
