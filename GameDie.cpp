@@ -12,5 +12,5 @@ int GameDie::roll()
 {
 	int rollDice;
 	rollDice = rand()%6+1;	//Genrate secret number between 1 and 6
-	printf("Number is: %i\n", rollDice);
+	return rollDice; 
 }
