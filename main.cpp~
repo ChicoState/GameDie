@@ -1,0 +1,10 @@
+#include "Gamedie.h"
+
+using namespace std;
+
+void main()
+{
+   GameDie g;
+   g.roll();
+   return 0;
+}
