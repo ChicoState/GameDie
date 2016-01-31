@@ -1,8 +1,12 @@
 #include "GameDie.h"
+#include <iostream>
+#include <cstdlib>
 
 int main()
 {
+	int number;
 	GameDie game;
-	game.roll();
+	number = game.roll();
+	cout << number << endl;
 	return 0;
 }
