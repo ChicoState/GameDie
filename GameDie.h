@@ -8,5 +8,5 @@ class GameDie
    void roll();
 };
 
-#include "GameDie.cpp"
+//#include "GameDie.cpp"
 #endif
