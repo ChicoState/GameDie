@@ -7,6 +7,5 @@ class GameDie
    GameDie();
    int roll();
 };
-
-#include "GameDie.cpp"
+//#include "GameDie.cpp"
 #endif
