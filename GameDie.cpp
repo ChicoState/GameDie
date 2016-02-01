@@ -12,4 +12,6 @@ GameDie::GameDie()
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
+   int randomNumber = rand() % 6 + 1;
+   std::cout << randomNumber << std::endl;
 }
