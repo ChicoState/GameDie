@@ -1,8 +1,0 @@
-#include "GameDie.h"
-
-int main(){
-	GameDie gamedie;
-	gamedie.roll();
-	cout<<num<<endl;
-	return 1;
-}
