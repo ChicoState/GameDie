@@ -5,7 +5,8 @@ class GameDie
 {
   public:
    GameDie();
-   int roll();
+   void roll();
 };
+
 //#include "GameDie.cpp"
 #endif
