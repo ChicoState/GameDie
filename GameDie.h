@@ -6,7 +6,9 @@ class GameDie
   public:
    GameDie();
    int roll();
+
+ private:
+   int number;
 };
 
-#include "GameDie.cpp"
 #endif
