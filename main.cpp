@@ -2,7 +2,7 @@
 #include"GameDie.h"
 
 int main(){
-	GameDie G;
+	GameDie G(20);
 	std::cout<<"GameDie value : "<< G.roll() <<std::endl;
 
 	return 0;
