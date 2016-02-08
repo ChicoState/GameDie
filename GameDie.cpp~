@@ -15,7 +15,7 @@ void GameDie::roll()
 {
    int r,t;
    cout<<"Enter the maximum number to be rolled"<<endl;
-   cin>>t;
+   cin<<t;
    r = rand() % 20 + 1;
    cout<<"Random number is "<<r<<endl;
 }
