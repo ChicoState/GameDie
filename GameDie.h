@@ -3,8 +3,10 @@
 
 class GameDie
 {
+  private:
+  int no_sides;
   public:
-   GameDie();
+   GameDie(int no_sides);
    int roll();
 };
 
