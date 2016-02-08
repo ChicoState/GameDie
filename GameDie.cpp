@@ -23,7 +23,7 @@ int GameDie::roll()
 	{
 		cout << "Please enter the integers 1 through 20" << endl;
 		
-	}else{
+	}else{ 
 	cout << rand() %(die - 1) + 1<<endl;
 	}
 }
