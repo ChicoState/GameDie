@@ -5,7 +5,11 @@ class GameDie
 {
   public:
    GameDie();
-   int roll();
+//   GameDie::GameDie(int a);
+   int roll(int l);
+  private:
+//    int a;
+//    int l;
 };
 
 //#include "GameDie.cpp"
