@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include<iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctime>
@@ -16,6 +17,13 @@ int GameDie::roll()
 {
 
 
-	int randNum = 1 + (rand()%6); 
-	return randNum;
+	int die;
+	cin >> die;
+	if((die < 1)||(die>20))
+	{
+		cout << "Please enter the integers 1 through 20" << endl;
+		
+	}else{
+	cout << rand() %(die - 1) + 1<<endl;
+	}
 }
