@@ -10,5 +10,5 @@ GameDie::GameDie()
 //generate a random number between 1-6 (inclusive) and display it
 void GameDie::roll()
 {
- std::cout<<(rand()%20+4);
+ std::cout<<(rand()%20+4)<<std::endl;
 }
