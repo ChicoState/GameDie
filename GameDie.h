@@ -1,12 +1,17 @@
+#include<stdlib.h>
+#include<time.h>
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
 
 class GameDie
 {
+  
   public:
+   int number;
    GameDie();
-   int roll();
+   GameDie(int number);
+   int roll(int );
 };
 
-#include "GameDie.cpp"
+//#include "GameDie.cpp"
 #endif
