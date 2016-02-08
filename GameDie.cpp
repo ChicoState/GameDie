@@ -7,10 +7,13 @@ GameDie::GameDie()
   srand(time(NULL));
 }
 
+
 //Random number is generated using rand function
 int GameDie::roll()
 {
-  number = rand() % 6 + 1;
-  std::cout << "The random number is: " << number << std::endl;
+  int new_number;
+  number = rand() % 20 + 4;
+  new_number = rand() % number + 1;
+  std::cout << "The random number is: " << new_number << std::endl;
   return 0;
 }
