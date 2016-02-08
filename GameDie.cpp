@@ -9,9 +9,12 @@ GameDie::GameDie()
    srand(time(NULL));
 }
 
-//generate a random number between 1-6 (inclusive) and return it
+//generate a random number between 1-20 (inclusive) and return it
 void GameDie::roll()
 {
-   int randomNumber = rand() % 6 + 1;
-   std::cout << randomNumber << std::endl;
+  int getValue;
+  std::cout << "Enter number to instantiation between 4 to 20" <<std::endl;
+  std::cin  >> getValue; 
+  int randomNumber = rand() % getValue + 1;
+  std::cout << "Result of Die rolled :" << randomNumber << std::endl;
 }
