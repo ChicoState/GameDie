@@ -5,6 +5,7 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(int);
    int roll();
 };
 

@@ -5,7 +5,10 @@
 int main()
 {
 	int number;
-	GameDie game;
+	int faces;
+	cout<<"Number of faces: ";
+	cin>>faces;
+	GameDie game(faces);
 	number = game.roll();
 	cout << number << endl;
 	return 0;

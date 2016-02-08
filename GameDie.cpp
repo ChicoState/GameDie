@@ -3,14 +3,22 @@
 #include <ctime>
 
 using namespace std;
+int value = 6;
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
 	srand(time(NULL));
+	value = 6;
 }
 
-//generate a random number between 1-6 (inclusive) and return it
+GameDie::GameDie(int f)
+{
+	srand(time(NULL));
+	value = f;
+}
+
+//generate a random number between 1-20 (inclusive) and return it
 int GameDie::roll()
 {
-	return rand() % 6 + 1;
+	return rand() % value + 1;
 }
