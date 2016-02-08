@@ -9,9 +9,9 @@ GameDie::GameDie()
 	srand(time(NULL));     //seeding the random number generator 
 }
 
-//generate a random number between 1-6 (inclusive) and return it
+//generate a random number between 4-20 (inclusive) and return it
 int GameDie::roll()
 {
-	int num = rand()%6;      //using rand() to generate random number
+	int num = (rand() % (20 + 1 - 4)) + 4;      //using rand() to generate random number
     return num;
 }
