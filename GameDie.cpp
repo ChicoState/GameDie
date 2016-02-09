@@ -5,21 +5,30 @@
 using namespace std;
 
 std::default_random_engine generator;
+
 //class constructor that seeds the random number generator
-
-
 GameDie::GameDie()
 {
   generator.seed(time(NULL));
 }
 
+//class parameterised constructor to instantiate sides of dice
+GameDie::GameDie(int n)
+{
+  numberOfSides = n;
+}
 
-//generate a random number between 1-6 (inclusive) and display it
+
+//generate and return a random number between 1-numberOfSides(inclusive)
 int GameDie::roll()
 {
  int diceValue = 0;
- std::uniform_int_distribution<int> distribution(1,6);
- diceValue = distribution(generator);
+ //Return dice value if number of sides is between 4-20(inclusive), else 0
+ if(numberOfSides >= 4 &&  numberOfSides <= 20)
+ {
+   std::uniform_int_distribution<int> distribution(1,numberOfSides);
+   diceValue = distribution(generator);
+ } 
  return diceValue;
 }
 
