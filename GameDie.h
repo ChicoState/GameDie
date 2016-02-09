@@ -6,7 +6,9 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(int n);
    int roll();
+   int numberOfSides;
 };
 
 #include "GameDie.cpp"
