@@ -1,3 +1,4 @@
+#include <iostream>
 #include <cstdlib>
 #include <stdlib.h>
 #include <time.h>
@@ -9,12 +10,12 @@ GameDie::GameDie()
    srand (time(NULL));
 }
 
-//generate a random number between 1-6 (inclusive) and return it
-int GameDie::roll()
+//generate a random number between 1-6 (inclusive) and display it
+void GameDie::roll()
 {
    int r,t;
    cout<<"Enter the maximum number to be rolled"<<endl;
-   cin>>t;
+   cin<<t;
    r = rand() % 20 + 1;
    cout<<"Random number is "<<r<<endl;
 }
