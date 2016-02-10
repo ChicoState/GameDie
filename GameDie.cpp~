@@ -13,6 +13,6 @@ GameDie::GameDie()
 int GameDie::roll()
 {
   	srand(time(NULL));
-  	int r=(rand()%15)+4;
+  	int r=(rand()%6)+1;
   	cout<<"Generated Random number is :" << r <<endl;
 }
