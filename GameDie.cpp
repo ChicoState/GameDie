@@ -11,7 +11,7 @@ GameDie::GameDie()
     for (int i = 0; i < SIDES; i++)
         counter[i] = 0;
 }
-// class constructor that seeds the random number generator
+//  Overload constructor for alternate-sized die
 GameDie::GameDie(unsigned int n)
 {
     int sides = n;
