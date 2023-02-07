@@ -11,7 +11,7 @@ class GameDie
    GameDie(unsigned int);
    int roll();
   private:
-   int SIDES;
+   int FACES;
    std::vector<int> counter;
 };
 

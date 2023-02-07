@@ -7,12 +7,12 @@ GameDie::GameDie()
 {
     SIDES = 6;
 
-    for (int i = 0; i < SIDES; i++) {
+    for (int i = 0; i < FACES; i++) {
         counter.push_back(0);
     }
 
     srand(time(NULL));
-    for(int i=0; i<SIDES; i++)
+    for(int i=0; i<FACES; i++)
       counter.at(i) = 0;
 }
 
@@ -21,24 +21,25 @@ GameDie::GameDie()
 GameDie::GameDie(unsigned int n)
 {
     if (n != 0) {
-        SIDES = n;
+        FACES = n;
     } else {
-        SIDES = 6;
+        FACES = 6;
     }
 
-    for (int i = 0; i < SIDES; i++) {
+    for (int i = 0; i < FACES; i++) {
         counter.push_back(0);
     }
 
     srand(time(NULL));
-    for(int i=0; i<SIDES; i++)
+    for(int i=0; i<FACES; i++)
       counter.at(i) = 0;
 }
 
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
-    int roll = rand() % SIDES;
+    int roll = rand() % FACES;
     counter.at(roll)++;
+
     return roll + 1;
 }
