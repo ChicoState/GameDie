@@ -2,12 +2,21 @@
 #include <cstdlib>
 #include <ctime>
 
-//class constructor that seeds the random number generator
+//class constructor that seeds the random number generator 
+
 
 GameDie::GameDie()
 {
     srand(time(NULL));
     for(int i=0; i<FACES; i++)
+      counter[i] = 0;
+}
+
+//overloaded constructur
+GameDie::GameDie(unsigned int a)
+{
+    srand(time(NULL));
+    for(int i=0; i<a; i++)
       counter[i] = 0;
 }
 
