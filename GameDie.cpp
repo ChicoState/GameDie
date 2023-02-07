@@ -30,10 +30,10 @@ int GameDie::roll()
 {
     int roll = rand() % SIDES;
     counter[roll]++;
-    results.push_back(roll + 1);
+    disributionArray.push_back(roll + 1);
     return roll + 1;
 }
 vector<int> GameDie::get_distribution()
 {
-    return results;
+    return disributionArray;
 }

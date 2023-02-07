@@ -1,6 +1,7 @@
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class GameDie
@@ -14,6 +15,7 @@ public:
 private:
   const static int SIDES = 6;
   int counter[SIDES];
+  vector<int> disributionArray;
 };
 
 #endif
