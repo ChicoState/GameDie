@@ -17,3 +17,9 @@ int GameDie::roll()
     counter[roll]++;
     return roll + 1;
 }
+
+vector<unsigned> GameDie::get_distribution() {
+    vector<unsigned> ret;
+    ret.push_back(GameDie::roll());
+    return ret;
+}
