@@ -3,13 +3,13 @@
 #include <ctime>
 
 //class constructor that seeds the random number generator
-/*
+
 GameDie::GameDie()
 {
     srand(time(NULL));
     for(int i=0; i<FACES; i++)
       counter[i] = 0;
-}*/
+}
 
 
 
