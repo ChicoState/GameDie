@@ -6,6 +6,8 @@ using namespace std; // change 1 - adding this namespace
 vector<int>Die_count; // change 1 - vector has been created for get_distribution function
 
 //class constructor that seeds the random number generator
+
+
 GameDie::GameDie()
 {
     srand(time(NULL));
@@ -15,6 +17,18 @@ GameDie::GameDie()
       for (int i = 0; i < Die_count.size()-1; i++)
         Die_count[i]=0;
       
+}
+
+//change -2 creating an overloaded constructor
+GameDie::GameDie(unsigned val)
+{
+    if(val==0)
+    {
+        FACES=6;
+    }
+    else 
+    FACES=val;
+    
 }
 
 //generate a random number between 1-6 (inclusive) and return it
