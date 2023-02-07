@@ -8,8 +8,7 @@ using std::vector;
 GameDie::GameDie()
 {
     srand(time(NULL));
-    for(int i=0; i<SIDES; i++)
-      counter[i] = 0;
+    counter = vector<int> (0, SIDES);
 }
 
 //generate a random number between 1-6 (inclusive) and return it
@@ -21,8 +20,5 @@ int GameDie::roll()
 }
 
 vector<int> GameDie::get_distribution() {
-    vector<int> distribution (SIDES, 0);
-    for (int i = 0; i < SIDES; i++) 
-        distribution[i] = counter[i];
-    return distribution;
+    return counter;
 } 
