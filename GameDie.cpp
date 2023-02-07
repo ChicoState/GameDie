@@ -1,6 +1,7 @@
 #include "GameDie.h"
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 // class constructor that seeds the random number generator
 GameDie::GameDie()
@@ -31,4 +32,14 @@ int GameDie::roll()
     int roll = rand() % FACES;
     counter[roll]++;
     return roll + 1;
+}
+
+std::vector<int> GameDie::get_distribution()
+{
+    std::vector<int> d(FACES);
+    for (int i = 0; i < FACES; i++)
+    {
+        d[i] = counter[i];
+    }
+    return d;
 }
