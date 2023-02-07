@@ -26,3 +26,12 @@ int GameDie::roll()
     counter[roll]++;
     return roll + 1;
 }
+
+//get distribution
+vector <int> GameDie::getDistribution()
+{
+    vector <int> dist;
+    for(int i=0; i<FACES; i++)
+      dist.push_back(counter[i]);
+    return dist;
+}
