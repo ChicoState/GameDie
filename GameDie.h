@@ -5,9 +5,11 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(unsigned int val);
    int roll();
+  vector <int> getDistribution();
   private:
-   const static int FACES = 6;
+   int FACES = 6;
    int counter[FACES];
 };
 
