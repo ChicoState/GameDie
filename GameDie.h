@@ -11,7 +11,7 @@ class GameDie
    int roll();
    std::vector<int> get_distribution();
   private:
-   const static int SIDES = 6;
+   int SIDES = 6;
    std::vector<int> counter;
 };
 

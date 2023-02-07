@@ -13,7 +13,9 @@ GameDie::GameDie()
 
 GameDie::GameDie(unsigned int n)
 {
-    
+    SIDES = n;
+    srand(time(NULL));
+    counter = vector<int>(0, SIDES);
 }
 
 //generate a random number between 1-6 (inclusive) and return it
