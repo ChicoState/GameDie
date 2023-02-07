@@ -11,7 +11,7 @@ GameDie::GameDie()
     {
     disCounter.push_back(0);
     }
-   
+
 }
 // constructor that the die can be created with any positive number of faces
     GameDie::GameDie(unsigned int val){
