@@ -26,7 +26,7 @@ int GameDie::roll()
     return roll + 1;
 }
 
-GameDie::get_distribution()
+vector<int> GameDie::get_distribution()
 {
     vector<int> V[SIDES] = {0};
 
