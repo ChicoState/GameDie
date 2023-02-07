@@ -12,6 +12,13 @@ GameDie::GameDie()
       counter[i] = 0;
 }
 
+//Overloaded contructor
+GameDie::GameDie(int sides)
+{
+  srand(time(NULL));
+    for(int i=0; i<sides; i++)
+      counter[i] = 0;
+}
 
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()

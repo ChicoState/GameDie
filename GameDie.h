@@ -8,6 +8,7 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(int sides);
    int roll();
    vector<int> get_distribution();
   private:
