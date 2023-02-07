@@ -17,3 +17,9 @@ int GameDie::roll()
     counter[roll]++;
     return roll + 1;
 }
+
+//returns the rolled dice faces as a distribution in a vector (i.e. 0, 1, 2, 0, 0, 0 is 1 roll for 2, 2 rolls for 3)
+vector<int> GameDie::get_distribution()
+{
+   return counter;
+} 
