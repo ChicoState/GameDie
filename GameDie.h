@@ -11,6 +11,14 @@ public:
 private:
   const static int SIDES = 6;
   int counter[SIDES];
+
+public:
+  GameDie();
+  int roll();
+
+private:
+  const static int FACES = 6;
+  int counter[FACES];
 };
 
 #endif
