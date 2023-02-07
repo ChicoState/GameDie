@@ -9,6 +9,7 @@ class GameDie
    GameDie();
    GameDie(unsigned int);
    int roll();
+   std::vector<int> get_distrubution();
   private:
    unsigned int currentFaces;
    std::vector<int> counter;

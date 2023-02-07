@@ -26,3 +26,8 @@ int GameDie::roll()
     counter[roll]++;
     return roll + 1;
 }
+
+//returns distribution to get number of rolls for each face of the die. 
+std::vector<int> GameDie::get_distrubution() {
+    return counter;
+}
