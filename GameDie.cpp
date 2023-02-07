@@ -10,6 +10,13 @@ GameDie::GameDie()
       counter[i] = 0;
 }
 
+// Overload the default constructor to accept any number of faces
+GameDie::GameDie(unsigned nFACES) {
+    FACES = nFACES;
+    for(int i=0; i<FACES; i++)
+      counter[i] = 0;
+}
+
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {

@@ -7,11 +7,12 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(unsigned nFACES);
    int roll();
    vector<unsigned> get_distribution()
 
   private:
-   const static int FACES = 6;
+   int FACES = 6;
    int counter[FACES];
 };
 
