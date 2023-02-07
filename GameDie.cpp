@@ -1,6 +1,8 @@
 #include "GameDie.h"
 #include <cstdlib>
 #include <ctime>
+#include <vector>
+#include <iostream>
 
 //class constructor that seeds the random number generator
 GameDie::GameDie()
@@ -10,10 +12,17 @@ GameDie::GameDie()
       counter[i] = 0;
 }
 
+
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
     int roll = rand() % SIDES;
     counter[roll]++;
+    dist[roll - 1]++;
     return roll + 1;
+}
+
+vector<int> GameDie::get_distribution()
+{
+  return dist;
 }
