@@ -17,6 +17,7 @@ GameDie::GameDie()
     srand(time(NULL));
     for(int i=0; i<SIDES; i++)
       counter.at(i) = 0;
+   
 }
 
 //generate a random number between 1-6 (inclusive) and return it
@@ -24,5 +25,6 @@ int GameDie::roll()
 {
     int roll = rand() % SIDES;
     counter.at(roll)++;
+
     return roll + 1;
 }
