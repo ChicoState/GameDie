@@ -1,14 +1,19 @@
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class GameDie
 {
   public:
-   GameDie();
-   int roll();
+    GameDie();
+    GameDie(int faces);
+    int roll();
   private:
-   const static int FACES = 6;
-   int counter[FACES];
+    const static int SIDES = 6;
+    int counter[SIDES];
 };
 
 #endif
