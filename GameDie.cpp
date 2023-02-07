@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <ctime>
 
+using std::vector;
+
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
@@ -17,3 +19,8 @@ int GameDie::roll()
     counter[roll]++;
     return roll + 1;
 }
+
+vector<int> GameDie::get_distribution() {
+    vector<int> temp;
+    return temp;
+} 
