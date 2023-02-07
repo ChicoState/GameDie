@@ -5,6 +5,7 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(unsigned int);
    int roll();
   private:
    const static int FACES = 6;

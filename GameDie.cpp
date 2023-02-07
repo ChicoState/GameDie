@@ -10,6 +10,12 @@ GameDie::GameDie()
       counter[i] = 0;
 }
 
+//overload constructor to update size of vector to n-1 sided dice
+GameDie::GameDie(unsigned int num_faces)
+{
+    FACES = num_faces;
+}
+
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
