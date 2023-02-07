@@ -6,6 +6,7 @@ class GameDie
 {
 public:
   GameDie();
+  GameDie(int x);
   int roll();
   std::vector<int> get_distribution();
 
