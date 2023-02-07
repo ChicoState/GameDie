@@ -6,6 +6,7 @@ using namespace std;
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
+    num = FACES;
     srand(time(NULL));
     for(int i=0; i<FACES; i++)
       counter[i] = 0;
