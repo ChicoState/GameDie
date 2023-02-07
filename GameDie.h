@@ -14,6 +14,8 @@ class GameDie
    const static int SIDES = 6;
    int counter[SIDES];
    vector<int> dist = {0,0,0,0,0,0};
+   const static int FACES = 6;
+   int counter[FACES];
 };
 
 #endif
