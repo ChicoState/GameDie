@@ -6,7 +6,18 @@
 GameDie::GameDie()
 {
     srand(time(NULL));
-    for(int i=0; i<SIDES; i++)
+    counter.resize(6);
+    SIDES = 6;
+    for(int i=0; i<6; i++)
+      counter[i] = 0;
+}
+
+//overloaded constructor GameDie::GameDie(unsigned int) so that die can be created with any positive number of faces.
+GameDie::GameDie(unsigned v) {
+    srand(time(NULL));
+    SIDES = v;
+    counter.resize(v);
+    for(int i=0; i<v; i++)
       counter[i] = 0;
 }
 
