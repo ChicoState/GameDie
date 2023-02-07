@@ -10,8 +10,13 @@ using namespace std;
 GameDie::GameDie()
 {
     srand(time(NULL));
+<<<<<<< HEAD
     for (int i = 0; i < SIDES; i++)
         counter[i] = 0;
+=======
+    for(int i=0; i<FACES; i++)
+      counter[i] = 0;
+>>>>>>> 6874c1fb4404664abbf2f823d682d3829168f9d4
 }
 
 GameDie::GameDie(unsigned int val)
@@ -42,7 +47,7 @@ GameDie::GameDie(unsigned int val)
 // generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
-    int roll = rand() % SIDES;
+    int roll = rand() % FACES;
     counter[roll]++;
     return roll + 1;
 }
