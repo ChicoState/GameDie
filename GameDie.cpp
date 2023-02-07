@@ -9,22 +9,33 @@ using namespace std;
 GameDie::GameDie()
 {
     srand(time(NULL));
-    for(int i=0; i<SIDES; i++)
+    for(int i=0; i<sides; i++)
+      counter[i] = 0;
+}
+
+// parameterized class constructor that takes number for die faces
+GameDie::GameDie(int n)
+{
+    if( n <= 0)
+        n = 6;
+    sides = n;
+    counter = new int(sides);
+    srand(time(NULL));
+    for(int i=0; i<sides; i++)
       counter[i] = 0;
 }
 
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
-    int roll = rand() % SIDES;
+    int roll = rand() % sides;
     counter[roll]++;
     return roll + 1;
 }
 
 vector<int> GameDie::get_distribution()
 {
-    int n = sizeof(counter) / sizeof(counter[0]);
-    vector<int> dist(counter, counter + n);
+    vector<int> dist(counter, counter + sides);
     
     return dist;
 }
