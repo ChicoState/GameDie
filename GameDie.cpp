@@ -6,14 +6,22 @@
 GameDie::GameDie()
 {
     srand(time(NULL));
-    for(int i=0; i<FACES; i++)
-      counter[i] = 0;
+
+    for (int i = 0; i < FACES; i++)
+        counter.push_back(0);
 }
 
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
     int roll = rand() % FACES;
+
     counter[roll]++;
     return roll + 1;
+}
+
+//return the distribution of dice rolls.
+std::vector<int> GameDie::get_distribution()
+{
+    return counter;
 }
