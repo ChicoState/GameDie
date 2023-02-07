@@ -1,6 +1,8 @@
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
 
+#include <vector>
+using namespace std;
 class GameDie
 {
 public:
