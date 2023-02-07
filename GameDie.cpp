@@ -17,3 +17,14 @@ int GameDie::roll()
     counter[roll]++;
     return roll + 1;
 }
+
+//getter function for retrieving roll distribution
+std::vector<int> GameDie::get_distribution()
+{
+    std::vector<int> distro;
+
+    for ( int i = 0; i< SIDES; i++) {
+        distro.push_back(counter[i]);
+    }
+    return distro;
+}
