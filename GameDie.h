@@ -12,7 +12,6 @@ public:
 private:
   const static int SIDES = 6;
   int counter[SIDES];
-  vector<int> distribution;
 };
 
 #endif

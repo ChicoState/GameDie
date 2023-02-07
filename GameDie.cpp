@@ -11,7 +11,6 @@ GameDie::GameDie()
     for (int i = 0; i < SIDES; i++)
     {
         counter[i] = 0;
-        distribution.push_back(0);
     }
 }
 
@@ -20,11 +19,15 @@ int GameDie::roll()
 {
     int roll = rand() % SIDES;
     counter[roll]++;
-    distribution[roll]++;
     return roll + 1;
 }
 
 vector<int> GameDie::get_distribution()
 {
+    vector<int> distribution;
+    for (unsigned i = 0; i < SIDES; i++)
+    {
+        distribution.push_back(counter[i]);
+    }
     return distribution;
 }
