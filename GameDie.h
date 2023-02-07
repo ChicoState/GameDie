@@ -13,7 +13,6 @@ class GameDie
   private:
    int SIDES;
    int counter[6];
-
 };
 
 #endif
