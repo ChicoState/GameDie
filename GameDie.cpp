@@ -10,11 +10,19 @@ GameDie::GameDie()
         counter[i] = 0;
 }
 
-GameDie::GameDie(unsigned a)
+GameDie::GameDie(unsigned int a)
 {
+    if (a == 0)
+    {
+        a = 6;
+    }
+    srand(time(NULL));
     for (int i = 0; i < a; i++)
+    {
         counter[i] = 0;
+    }
 }
+
 // generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
