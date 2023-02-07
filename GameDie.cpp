@@ -14,6 +14,11 @@ GameDie::GameDie()
         counter[i] = 0;
 }
 
+//Parameterized Constructor to added variable faces
+GameDie::GameDie(int x)
+{
+    
+}
 // generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
