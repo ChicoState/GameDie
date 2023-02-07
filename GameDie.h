@@ -3,12 +3,15 @@
 
 class GameDie
 {
-  public:
-   GameDie();
-   int roll();
-  private:
-   const static int SIDES = 6;
-   int counter[SIDES];
+public:
+  GameDie();
+  GameDie(unsigned int);
+  int roll();
+  vector<int> get_distribution();
+
+private:
+  const static int SIDES = 6;
+  int counter[SIDES];
 };
 
 #endif
