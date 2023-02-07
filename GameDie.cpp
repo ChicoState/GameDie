@@ -21,6 +21,8 @@ int GameDie::roll()
 }
 
 vector<int> GameDie::get_distribution() {
-    vector<int> temp;
-    return temp;
+    vector<int> distribution (SIDES, 0);
+    for (int i = 0; i < SIDES; i++) 
+        distribution[i] = counter[i];
+    return distribution;
 } 
