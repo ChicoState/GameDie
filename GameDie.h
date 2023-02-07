@@ -7,6 +7,7 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(unsigned int);
    int roll();
    std::vector<int> get_distribution();
   private:

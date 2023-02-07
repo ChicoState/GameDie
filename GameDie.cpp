@@ -11,6 +11,11 @@ GameDie::GameDie()
     counter = vector<int> (0, SIDES);
 }
 
+GameDie::GameDie(unsigned int n)
+{
+    
+}
+
 //generate a random number between 1-6 (inclusive) and return it
 int GameDie::roll()
 {
