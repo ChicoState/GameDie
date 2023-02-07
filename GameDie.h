@@ -7,6 +7,7 @@ class GameDie
 {
 public:
   GameDie();
+  GameDie(unsigned int n);
   int roll();
   vector<int> get_distribution();
 
