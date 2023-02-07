@@ -17,3 +17,12 @@ int GameDie::roll()
     counter[roll]++;
     return roll + 1;
 }
+
+//solves issue #43
+//Creates a overloaded constructor for alternate-sized die
+GameDie::GameDie(unsigned int noOfSides){
+    srand(time(NULL));
+    SIDES = noOfSides;
+    for(int i=0; i<SIDES; i++)
+        counter[i] = 0;
+}

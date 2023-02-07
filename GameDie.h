@@ -3,12 +3,13 @@
 
 class GameDie
 {
-  public:
-   GameDie();
-   int roll();
-  private:
-   const static int SIDES = 6;
-   int counter[SIDES];
+    public:
+        GameDie();
+        GameDie(unsigned int noOfSides);  //overloaded constructor for alternate sized die
+        int roll();
+    private:
+        static int SIDES = 6;   //removed const so that we can assign new value of no. of faces for overloaded constructor
+        int counter[SIDES];
 };
 
 #endif
