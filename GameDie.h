@@ -5,10 +5,13 @@ class GameDie
 {
   public:
    GameDie();
+   GameDie(unsigned int no);
    int roll();
+   vector<int> get_distribution();
   private:
-   const static int FACES = 6;
-   int counter[FACES];
+   int SIDES;
+   int counter[SIDES];
+   vector<int> roll;
 };
 
 #endif
