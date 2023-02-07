@@ -1,14 +1,16 @@
 #ifndef GAMEDIE_H
 #define GAMEDIE_H
+#include<vector>
 
 class GameDie
 {
   public:
    GameDie();
+   GameDie(int size);
    int roll();
   private:
-   const static int SIDES = 6;
-   int counter[SIDES];
+   int SIDES;
+   std::vector<int> counter;
 };
 
 #endif
