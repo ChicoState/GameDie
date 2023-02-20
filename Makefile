@@ -1,3 +1,3 @@
 CC=g++
 all:
-	$(CC) -Wall *.cpp
+	$(CC) -Wall -Werror *.cpp
