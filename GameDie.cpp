@@ -59,5 +59,5 @@ vector <int> GameDie::get_distribution_percentage()
 	{
 		percentages[i] = (counter[i]/numRolls) * 100;
 	}
-    return percentages;
+    return percentages;							//return the vector of percentages
 }
