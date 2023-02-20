@@ -25,7 +25,7 @@ GameDie::GameDie(unsigned int num)
     }
     for(int i=0; i<FACES; i++)
     {
-        counter[i] = 0;
+        counter[i] = roll();
     }
 
 }
