@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-using std::vector;
 
 #include "GameDie.h"
 
