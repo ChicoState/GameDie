@@ -2,6 +2,8 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
+using namespace std;
 
 //class constructor that seeds the random number generator
 GameDie::GameDie()
@@ -43,4 +45,19 @@ int GameDie::roll()
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
     return counter;
+}
+vector<double> GameDie::get_percentages(){
+    int amountRolls = 0;
+    for(int i=0; i < FACES; i++)
+    {
+        amountRolls += counter[i];
+    }
+    vector<double> percentage;
+    for(int i=0; i < FACES; i++)
+    {
+        percentage[i] = static_cast<double> (counter[i]/amountRolls);
+        cout<<percentage[i]<<" ";
+    }
+    cout<<endl;
+    return percentage;
 }
