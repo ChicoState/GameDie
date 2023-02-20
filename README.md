@@ -1,3 +1,5 @@
+[![C/C++ CI](https://github.com/Clemensstrigl/GameDie/actions/workflows/cpp.yml/badge.svg)](https://github.com/Clemensstrigl/GameDie/actions/workflows/cpp.yml)
+
 # GameDie
 
 This repository provides a class that represents a game die, such as the
