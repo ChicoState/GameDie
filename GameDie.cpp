@@ -3,6 +3,11 @@
 #include <cstdlib>
 #include <ctime>
 
+int main()
+{
+    return 0;
+}
+
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
