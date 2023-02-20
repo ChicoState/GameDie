@@ -12,6 +12,7 @@ GameDie::GameDie()
 {
     srand(time(NULL));
     roll_counter.resize(FACES);
+    roll_percentages.resize(FACES);
 
     for(int i=0; i<FACES; i++)
       roll_counter[i] = 0;
@@ -40,6 +41,7 @@ int GameDie::roll()
 {
     int roll = rand() % roll_counter.size();
     roll_counter[roll]++;
+    num_rolls++;
     return roll + 1;
 }
 
@@ -48,3 +50,11 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return roll_counter;
 }
+
+vector<double> GameDie::get_percentages() {
+    for (int i = 0; i < roll_counter.size(); i++) {
+        roll_percentages[i] = roll_counter[i]/num_rolls;
+    }
+    return roll_percentages;
+}
+
