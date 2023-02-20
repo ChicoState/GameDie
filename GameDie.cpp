@@ -43,7 +43,7 @@ int GameDie::roll()
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
     int percentage ;
-    for (int i = 0; i< getsize(counter-1); i++){
+    for (int i = 0; i< sizeof(counter-1); i++){
         percentage = percentage + counter[i];
     }
         percentage = percentage / 100;
