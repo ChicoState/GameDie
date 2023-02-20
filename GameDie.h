@@ -15,6 +15,7 @@ class GameDie
 
   private:
    vector <int> roll_counter;
+   vector <double> percent;
    const static int FACES = 6;
 };
 
