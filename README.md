@@ -1,3 +1,4 @@
+[![.github/workflows/main.yml](https://github.com/AverageOtter/GameDie/actions/workflows/main.yml/badge.svg)](https://github.com/AverageOtter/GameDie/actions/workflows/main.yml)
 # GameDie
 
 This repository provides a class that represents a game die, such as the
