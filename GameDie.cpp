@@ -44,3 +44,20 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return counter;
 }
+
+
+//return the percentage distribution of rolls
+vector <int> GameDie::get_distribution_percentage()
+{
+	vector <int> percentages;
+	int numRolls = 0;
+	for (int i=0; i<FACES; i++)					//tally up all the rolls counted
+	{
+		numRolls = numRolls + counter[i];
+	}
+	for (int i=0; i<FACES; i++)					//calculate the percentage of each role
+	{
+		percentages[i] = (counter[i]/numRolls) * 100;
+	}
+    return percentages;
+}
