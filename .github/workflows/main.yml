@@ -1,12 +1,12 @@
 name: Game Die
  
- on:
+on:
    push:
       branches: [ main ]
    pull_request:
        branches: [ main ]
        
- jobs:
+jobs:
    install:
      runs-on: ubuntu-latest
      steps:
