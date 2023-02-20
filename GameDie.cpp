@@ -37,7 +37,7 @@ vector<double> GameDie::get_percentages()
     return perc;
 
   for(int i = 0; i < counter.size(); i++){
-    perc[i] = count[i]/(double)totalRolls;
+    perc[i] = counter[i]/(double)totalRolls;
   }
 
   return perc;
