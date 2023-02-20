@@ -53,16 +53,3 @@ vector<double> GameDie::get_percentages() {
   }
   return percentages;
 }
-
-#include <iostream>
-int main() {
-  // test get_percentages
-  GameDie die(4);
-  for (int i = 0; i < 4; i++) {
-    die.roll();
-  }
-  vector<double> percentages = die.get_percentages();
-  for (uint i = 0; i < percentages.size(); i++) {
-    std::cout << percentages[i] << std::endl;
-  }
-}
