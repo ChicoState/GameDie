@@ -1,3 +1,4 @@
+[![Build C++](https://github.com/jfherrera02/GameDiejh/actions/workflows/main.yml/badge.svg)](https://github.com/jfherrera02/GameDiejh/actions/workflows/main.yml)
 # GameDie
 
 This repository provides a class that represents a game die, such as the
