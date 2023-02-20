@@ -25,7 +25,7 @@ GameDie::GameDie(unsigned int num)
     }
     for(int i=0; i<FACES; i++)
     {
-        counter[i] = 0;
+        roll_counter[i] = 0;
     }
 
 }
@@ -33,6 +33,9 @@ GameDie::GameDie(unsigned int num)
 vector<double> GameDie::get_percentages()
 {
   vector<double> perc(roll_counter.size(),0.0);
+  int totalRolls = 0;
+  for(int i = 0; i < (int)roll_counter.size(); i++)
+    totalRolls += roll_counter[i];
   if (totalRolls == 0)
     return perc;
 
@@ -50,7 +53,6 @@ int GameDie::roll()
 {
     int roll = rand() % roll_counter.size();
     roll_counter[roll]++;
-    totalRolls ++;
     return roll + 1;
 }
 
