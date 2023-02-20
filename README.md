@@ -26,5 +26,3 @@ Once built, run the image:
 `docker run --mount type=bind,source="$(pwd)",target=/usr/src -it cpp-container`
 
 [![Build C++](https://github.com/no-bugs-only-features/GameDie/actions/workflows/build.yml/badge.svg)](https://github.com/no-bugs-only-features/GameDie/actions/workflows/build.yml)
-
-[![Build C++](https://github.com/no-bugs-only-features/GameDie/actions/workflows/build.yml/badge.svg)](https://github.com/no-bugs-only-features/GameDie/actions/workflows/build.yml)
