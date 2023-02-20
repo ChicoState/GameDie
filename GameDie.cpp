@@ -45,5 +45,5 @@ vector <int> GameDie::get_distribution(){
     return roll_counter;
 }
 vector <double> GameDie::get_percentage(){
-    return perent(roll_counter);
+    return percent(roll_counter);
 }
