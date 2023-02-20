@@ -13,9 +13,9 @@ public:
   vector<int> get_distribution();
   vector<double> get_percentages();
 
-private:
-  vector<int> counter;
-  const static int FACES = 6;
+  private:
+   vector <int> roll_counter;
+   const static int FACES = 6;
 };
 
 #endif
