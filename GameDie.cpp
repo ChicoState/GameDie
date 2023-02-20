@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include<iostream>
 
 int main() {
     return 0;
@@ -56,7 +57,7 @@ vector <int> GameDie::get_distribution(){
 
 vector<double> GameDie::get_percentages() {
     for (int i = 0; i < (int) roll_counter.size(); i++) {
-        roll_percentages[i] = roll_counter[i]/num_rolls;
+        roll_percentages[i] = roll_counter[i]/(double) num_rolls;
     }
     return roll_percentages;
 }
