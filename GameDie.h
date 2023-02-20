@@ -11,7 +11,7 @@ class GameDie
    GameDie(unsigned int);
    int roll();
    vector <int> get_distribution();
-   vector <double> percentages();
+   vector <double> get_percentages();
 
   private:
    vector <int> counter;
