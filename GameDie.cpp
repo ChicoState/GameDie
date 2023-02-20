@@ -9,7 +9,7 @@ GameDie::GameDie()
     srand(time(NULL));
     counter.resize(FACES);
 
-    for(int i=0; i<FACES; i++)
+    for(unsigned int i=0; i<FACES; i++)
       counter[i] = 0;
 }
 
@@ -27,7 +27,7 @@ GameDie::GameDie(unsigned int num)
         counter.resize(num);
     }
 
-    for(int i=0; i<FACES; i++)
+    for(unsigned int i=0; i<FACES; i++)
     {
         counter[i] = 0;
     }

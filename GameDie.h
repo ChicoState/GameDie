@@ -14,7 +14,7 @@ class GameDie
 
   private:
    vector <int> counter;
-   int FACES = 6;
+   unsigned int FACES = 6;
 };
 
 #endif
