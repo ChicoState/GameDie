@@ -14,6 +14,7 @@ class GameDie
    vector<int> get_distribution();
 
   private:
+
    vector<int> counter;
    const static int FACES = 6;
 };
