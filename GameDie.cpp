@@ -44,3 +44,18 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return counter;
 }
+
+vector <double> GameDie::get_percentages()
+{
+  vector<double> p;
+  vector<int> d = get_distribution();
+  int tot_rolls = d.size();
+
+  for(int i = 0; i< d.size(); i++)
+  {
+    double percentage = static_cast<double>(i) / tot_rolls;
+    p.push_back(percentage);
+  }
+  return p;
+}
+
