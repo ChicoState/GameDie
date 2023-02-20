@@ -14,7 +14,7 @@ class GameDie
 
   private:
    vector <int> counter;
-   const static int FACES = 6;
+   int FACES = 6;
 };
 
 #endif

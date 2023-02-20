@@ -16,13 +16,17 @@ GameDie::GameDie()
 //overloaded constructor
 GameDie::GameDie(unsigned int num)
 {
+    srand(time(NULL));
+    
     if( num == 0 )
     {
         counter.resize(FACES);
     }
     else{
+        FACES = num;
         counter.resize(num);
     }
+
     for(int i=0; i<FACES; i++)
     {
         counter[i] = 0;
