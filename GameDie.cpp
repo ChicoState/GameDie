@@ -44,3 +44,12 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return counter;
 }
+
+vector <float> GameDie::get_percentages(){
+	vector<float> p; 
+	for(int i=0;i<counter.size();i++){
+		float val = float(counter[i])/float(counter.size());
+		p.push_back(val);
+	}
+	return p;
+}
