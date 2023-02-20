@@ -42,5 +42,7 @@ int GameDie::roll()
 // return the count of how many times each face has been rolled, as a vector
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
+	for(int i=0;i<counter.size();++i)
+	 counter[i] = counter[i] / 100;	
     return counter;
 }
