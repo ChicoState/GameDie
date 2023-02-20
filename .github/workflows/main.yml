@@ -21,4 +21,4 @@ name: Game Die
      steps:
        - uses: actions/checkout@v3
        - name: Build CI Environment
-         run: g++ main.cpp -std=c++17 -Wall -Wextra -Werror -o intro-to-CI-Enironment
+         run: g++ GameDie.cpp -std=c++17 -Wall -Wextra -Werror -o intro-to-CI-Enironment
