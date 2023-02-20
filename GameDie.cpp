@@ -10,7 +10,7 @@ GameDie::GameDie()
     roll_counter.resize(FACES);
 
     for(int i=0; i<FACES; i++)
-      counter[i] = 0;
+      roll_counter[i] = 0;
 }
 
 //overloaded constructor
