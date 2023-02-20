@@ -6,27 +6,27 @@
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
-    srand(time(NULL));
-    counter.resize(FACES);
+	srand(time(NULL));
+	counter.resize(FACES);
 
-    for(int i=0; i<FACES; i++)
-      counter[i] = 0;
+	for(int i=0; i<FACES; i++)
+		counter[i] = 0;
 }
 
 //overloaded constructor
 GameDie::GameDie(unsigned int num)
 {
-    if( num == 0 )
-    {
-        counter.resize(FACES);
-    }
-    else{
-        counter.resize(num);
-    }
-    for(int i=0; i<FACES; i++)
-    {
-        counter[i] = 0;
-    }
+	if( num == 0 )
+	{
+		counter.resize(FACES);
+	}
+	else{
+		counter.resize(num);
+	}
+	for(int i=0; i<FACES; i++)
+	{
+		counter[i] = 0;
+	}
 
 }
 
@@ -34,13 +34,31 @@ GameDie::GameDie(unsigned int num)
 // (inclusive) and return it
 int GameDie::roll()
 {
-    int roll = rand() % counter.size();
-    counter[roll]++;
-    return roll + 1;
+	int roll = rand() % counter.size();
+	counter[roll]++;
+	return roll + 1;
 }
 
 // return the count of how many times each face has been rolled, as a vector
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
-    return counter;
+	return counter;
+}
+
+//returns percentage of rolls for each face relative to the number of total rolls
+vector <double> GameDie::get_percentages() {
+	vector <int> rolls;
+	rolls = get_distribution();
+	vector <double> res;
+	int total = 0;
+
+	for(int i = 0; i < rolls.size(); i++) {
+		total += rolls[i];
+	}
+
+	res.resize(rolls.size());
+
+	for(int i = 0; i < res.size(); i++) {
+		res[i] = (double)rolls[i]/(double)total;
+	}
 }
