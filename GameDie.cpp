@@ -12,7 +12,6 @@ GameDie::GameDie()
     for(int i=0; i<FACES; i++)
       counter[i] = 0;
 }
-
 //overloaded constructor
 GameDie::GameDie(unsigned int num)
 {
@@ -42,5 +41,12 @@ int GameDie::roll()
 // return the count of how many times each face has been rolled, as a vector
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
+    for(int i=0 ; i<FACES; i++){
+        if(counter[i]>0){
+            counter[i] = counter[i]/FACES;
+        }else{
+            counter[i] = 0; 
+        }
+    }
     return counter;
 }
