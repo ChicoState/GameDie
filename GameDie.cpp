@@ -7,10 +7,10 @@
 GameDie::GameDie()
 {
     srand(time(NULL));
-    roll_counter.resize(FACES);
+    m_counter.resize(m_FACES);
 
-    for(int i=0; i<FACES; i++)
-      roll_counter[i] = 0;
+    for(int i=0; i<m_FACES; i++)
+      m_counter[i] = 0;
 }
 
 //overloaded constructor
@@ -18,14 +18,14 @@ GameDie::GameDie(unsigned int num)
 {
     if( num == 0 )
     {
-        roll_counter.resize(FACES);
+        m_counter.resize(m_FACES);
     }
     else{
-        roll_counter.resize(num);
+        m_counter.resize(num);
     }
-    for(int i=0; i<FACES; i++)
+    for(int i=0; i<m_FACES; i++)
     {
-        roll_counter[i] = 0;
+        m_counter[i] = 0;
     }
 
 }
@@ -34,13 +34,13 @@ GameDie::GameDie(unsigned int num)
 // (inclusive) and return it
 int GameDie::roll()
 {
-    int roll = rand() % roll_counter.size();
-    roll_counter[roll]++;
+    int roll = rand() % m_counter.size();
+    m_counter[roll]++;
     return roll + 1;
 }
 
 // return the count of how many times each face has been rolled, as a vector
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
-    return roll_counter;
+    return m_counter;
 }
