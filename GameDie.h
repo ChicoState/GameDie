@@ -2,7 +2,7 @@
 #define GAMEDIE_H
 #include <vector>
 
-using std::vector;
+using namespace std;
 
 class GameDie
 {
