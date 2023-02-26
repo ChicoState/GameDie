@@ -44,3 +44,19 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return roll_counter;
 }
+
+// return the percentage of how many times each face has been rolled compared to other faces, as a vector
+// where each face's count is at index face-1 (i.e. Face 1 is at index 0)
+vector <double> GameDie::get_percentages() {
+    double total = 0;
+    for (int i : counter) {
+        total += i;
+    }
+    vector <double> percentages(0);
+    if (total != 0) {
+        for (int i : counter) {
+            percentages.push_back(i / total);
+        }
+    }
+    return percentages;
+}

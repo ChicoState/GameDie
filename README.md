@@ -1,4 +1,5 @@
 # GameDie
+[![Compile C++](https://github.com/Prospector/GameDie/actions/workflows/compile-test.yml/badge.svg?branch=main)](https://github.com/Prospector/GameDie/actions/workflows/compile-test.yml)
 
 This repository provides a class that represents a game die, such as the
 six-sided dice used in traditional dice game. While the die defaults to 
