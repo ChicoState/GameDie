@@ -8,9 +8,13 @@ GameDie::GameDie()
 {
     srand(time(NULL));
     roll_counter.resize(FACES);
+    roll_percentage.resize(FACES);
 
     for(int i=0; i<FACES; i++)
+    {
       roll_counter[i] = 0;
+      roll_percentage[i] = 0;
+    }
 }
 
 //overloaded constructor
@@ -19,13 +23,16 @@ GameDie::GameDie(unsigned int num)
     if( num == 0 )
     {
         roll_counter.resize(FACES);
+        roll_percentage.resize(FACES);
     }
     else{
         roll_counter.resize(num);
+        roll_percentage.resize(num);
     }
     for(int i=0; i<FACES; i++)
     {
         roll_counter[i] = 0;
+        roll_percentage[i] = 0;
     }
 
 }
@@ -36,6 +43,8 @@ int GameDie::roll()
 {
     int roll = rand() % roll_counter.size();
     roll_counter[roll]++;
+    totalRolls++;
+    roll_percentage[roll] = roll_counter[roll] / totalRolls;
     return roll + 1;
 }
 
@@ -43,4 +52,14 @@ int GameDie::roll()
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
     return roll_counter;
+}
+
+vector <double> GameDie::get_percentage()
+{
+  return roll_percentage;
+}
+
+int main()
+{
+  return 0;
 }
