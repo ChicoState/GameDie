@@ -1,3 +1,6 @@
+[![Build C++](https://github.com/Jorge-C-2000/GameDie/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Jorge-C-2000/GameDie/actions/workflows/c-cpp.yml)
+
+
 # GameDie
 
 This repository provides a class that represents a game die, such as the
