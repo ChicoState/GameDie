@@ -1,4 +1,5 @@
 # GameDie
+[![<C++ CI>](https://github.com/mhmcvay/GameDie/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/mhmcvay/GameDie/actions/workflows/c-cpp.yml)
 
 This repository provides a class that represents a game die, such as the
 six-sided dice used in traditional dice game. While the die defaults to 
