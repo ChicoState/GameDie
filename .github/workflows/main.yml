@@ -1,0 +1,13 @@
+name: CPP CI
+
+on:
+  push:
+    branches: [ "main" ]
+  
+jobs:
+  name: Buildcpp
+  runs-on: ubuntu-latest
+  steps:
+  - name: Running g++
+  run: |
+        g++ -Wall *.cpp
