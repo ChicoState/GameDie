@@ -1,3 +1,4 @@
 CC=g++
 all:
-	$(CC) -Wall *.cpp
+	$(CC) -Wall -c GameDie.cpp 
+
