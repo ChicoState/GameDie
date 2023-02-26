@@ -1,5 +1,7 @@
 # GameDie
 
+[![Build C++](https://github.com/billofbong/GameDie/actions/workflows/main.yml/badge.svg)](https://github.com/billofbong/GameDie/actions/workflows/main.yml)
+
 This repository provides a class that represents a game die, such as the
 six-sided dice used in traditional dice game. While the die defaults to 
 six sides, the overloaded constructor allows the developer to customize

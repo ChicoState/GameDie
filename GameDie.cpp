@@ -3,11 +3,17 @@
 #include <cstdlib>
 #include <ctime>
 
+int main()
+{
+    return 0;
+}
+
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
     srand(time(NULL));
     roll_counter.resize(FACES);
+    rolls = 0;
 
     for(int i=0; i<FACES; i++)
       roll_counter[i] = 0;
@@ -36,6 +42,7 @@ int GameDie::roll()
 {
     int roll = rand() % roll_counter.size();
     roll_counter[roll]++;
+    rolls++;
     return roll + 1;
 }
 
@@ -43,4 +50,11 @@ int GameDie::roll()
 // where each face's count is at index face-1 (i.e. Face 1 is at index 0)
 vector <int> GameDie::get_distribution(){
     return roll_counter;
+}
+
+vector <double> GameDie::get_percentages(){
+    vector<double> distribution(FACES);
+    for(int i = 0; i < FACES; i++)
+        distribution[i] = (double)roll_counter[i] / (double)rolls;
+    return distribution;
 }
