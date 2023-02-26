@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 
 //class constructor that seeds the random number generator
 GameDie::GameDie()
