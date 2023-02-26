@@ -44,3 +44,9 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return roll_counter;
 }
+
+int main(){
+    GameDie stuff;
+    int roll = stuff.roll();
+    return 0;
+}
