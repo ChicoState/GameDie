@@ -30,6 +30,23 @@ GameDie::GameDie(unsigned int num)
 
 }
 
+vector<double> GameDie::get_percentages()
+{
+  vector<double> perc(roll_counter.size(),0.0);
+  int totalRolls = 0;
+  for(int i = 0; i < (int)roll_counter.size(); i++)
+    totalRolls += roll_counter[i];
+  if (totalRolls == 0)
+    return perc;
+
+  for(int i = 0; i < (int)roll_counter.size(); i++){
+    perc[i] = roll_counter[i]/(double)totalRolls;
+  }
+
+  return perc;
+
+}
+
 //generate a random number between 1-n where n is the counter size
 // (inclusive) and return it
 int GameDie::roll()
@@ -44,3 +61,6 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return roll_counter;
 }
+
+
+int main(){}
