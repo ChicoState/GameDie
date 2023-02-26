@@ -18,6 +18,7 @@ GameDie::GameDie(unsigned int num)
 {
     if( num == 0 )
     {
+        counter.resize(FACES);
         roll_counter.resize(FACES);
     }
     else{
