@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+using namespace std;
 
 //class constructor that seeds the random number generator
 GameDie::GameDie()
@@ -44,3 +45,14 @@ int GameDie::roll()
 vector <int> GameDie::get_distribution(){
     return roll_counter;
 }
+vector<double> GameDie::get_percentages(){
+   int count=0;
+   vector<double> percentages;
+   for(int i=0;i<=counter.size();i++){
+	   count=count+counter[i];
+   }
+   for(int i=0;i<=counter.size();i++){
+	   percentages[i]= static_cast<double> (counter[i])/count;
+}
+ return percentages;
+ }
